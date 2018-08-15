@@ -5,5 +5,39 @@ logging:
     org.apache.commons.httpclient.wire.header: info
 
 spring:
+  profiles:
+    active: dev
+  application:
+    name: demo
+  thymeleaf:
+    prefix: classpath:/templates/
   service:
     url: http://127.0.0.1:50005
+
+---
+#dev env
+spring:
+  profiles: dev
+server:
+  port: 50005
+
+---
+#test env
+spring:
+  profiles: test
+server:
+  port: 50006
+
+---
+#beta env
+spring:
+  profiles: beta
+server:
+  port: 50007
+chitchat:
+---
+#prod env
+spring:
+  profiles: prod
+server:
+  port: 50008
