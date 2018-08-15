@@ -22,9 +22,9 @@ server:
   port: 50005
 
 ---
-#test env
+#self env
 spring:
-  profiles: test
+  profiles: self
 server:
   port: 50006
 

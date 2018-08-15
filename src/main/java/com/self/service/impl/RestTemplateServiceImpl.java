@@ -1,8 +1,8 @@
-package com.test.service.impl;
+package com.self.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.test.service.RestTemplateService;
+import com.self.service.RestTemplateService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +26,7 @@ public class RestTemplateServiceImpl implements RestTemplateService {
     @Override
     public String getInfo(String url) {
         JSONObject req = new JSONObject();
-        req.put("test", "hello world");
+        req.put("self", "hello world");
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON_UTF8);
         HttpEntity httpEntity = new HttpEntity(req, headers);

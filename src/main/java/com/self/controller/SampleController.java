@@ -1,6 +1,6 @@
-package com.test.controller;
+package com.self.controller;
 
-import com.test.model.Info;
+import com.self.model.Info;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @EnableAutoConfiguration
 public class SampleController {
-    private static Logger log = LoggerFactory.getLogger("com.test.controller.SampleController");
+    private static Logger log = LoggerFactory.getLogger("com.self.controller.SampleController");
 
     @GetMapping("/")
     public String index() {

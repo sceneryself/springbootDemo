@@ -1,4 +1,4 @@
-package com.test.init;
+package com.self.init;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;

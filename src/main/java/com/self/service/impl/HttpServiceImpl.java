@@ -1,9 +1,9 @@
-package com.test.service.impl;
+package com.self.service.impl;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.test.service.HttpService;
-import com.test.util.HttpUtils;
+import com.self.service.HttpService;
+import com.self.util.HttpUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;

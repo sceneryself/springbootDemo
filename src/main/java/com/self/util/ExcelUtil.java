@@ -1,4 +1,4 @@
-package com.test.util;
+package com.self.util;
 
 import jxl.Cell;
 import jxl.Sheet;

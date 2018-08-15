@@ -1,4 +1,4 @@
-package com.test.model.enums;
+package com.self.model.enums;
 
 public enum IntentResult {
     YES(1, "确认"),

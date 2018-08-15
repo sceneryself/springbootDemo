@@ -1,4 +1,4 @@
-package com.test.model;
+package com.self.model;
 
 public class Info {
     private int maxchannelcount;

@@ -1,4 +1,4 @@
-package com.test.init;
+package com.self.init;
 
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;

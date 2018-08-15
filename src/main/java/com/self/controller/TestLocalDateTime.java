@@ -1,4 +1,4 @@
-package com.test.controller;
+package com.self.controller;
 
 import com.alibaba.fastjson.JSONObject;
 
@@ -28,7 +28,7 @@ public class TestLocalDateTime {
 
         JSONObject jsonResp = new JSONObject();
 
-        jsonResp.get("test");
+        jsonResp.get("self");
 
     }
 }
