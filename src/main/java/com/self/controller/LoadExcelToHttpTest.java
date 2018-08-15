@@ -12,7 +12,7 @@ import java.util.List;
 
 public class LoadExcelToHttpTest {
     private static Logger log = LoggerFactory.getLogger(LoadExcelToHttpTest.class);
-    private static final String url = "http://nlu.t.dui.ai/aispeech/dataclean/intent";
+    private static final String url = "";
 
     public static void importIntentByPath(String path) {
         log.info("importIntentByPath");

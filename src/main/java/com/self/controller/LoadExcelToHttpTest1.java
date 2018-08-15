@@ -26,7 +26,7 @@ public class LoadExcelToHttpTest1 {
                 q.put("content", strArray[j]);
                 q.put("from", "idea");
                 q.put("textId", "helloworld");
-                //                JSONObject json = restTemplate.postForEntity("http://nlu.t.dui.ai/aispeech/dataclean/intent", q, JSONObject.class).getBody();
+                //                JSONObject json = restTemplate.postForEntity("", q, JSONObject.class).getBody();
 //                log.info("response: {}", json);
             }
         }
