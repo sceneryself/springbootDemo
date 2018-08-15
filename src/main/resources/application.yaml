@@ -3,3 +3,7 @@ logging:
     org.apache.commons.httpclient.wire.content: info
     org.apache.commons.httpclient: info
     org.apache.commons.httpclient.wire.header: info
+
+spring:
+  service:
+    url: http://127.0.0.1:50005

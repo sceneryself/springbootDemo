@@ -10,6 +10,6 @@ public class CommandLineRunnerListenerImpl implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        System.out.println(">>>>This is MyStartupRunnerTest Order=1. Only testing CommandLineRunner...<<<<");
+        System.out.println(">>>> CommandLineRunnerListenerImpl...<<<<");
     }
 }
