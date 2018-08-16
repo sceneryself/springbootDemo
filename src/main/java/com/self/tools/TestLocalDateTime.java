@@ -1,4 +1,4 @@
-package com.self.controller;
+package com.self.tools;
 
 import com.alibaba.fastjson.JSONObject;
 

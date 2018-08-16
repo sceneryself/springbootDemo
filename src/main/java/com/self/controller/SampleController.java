@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @EnableAutoConfiguration
 public class SampleController {
-    private static Logger log = LoggerFactory.getLogger("com.self.controller.SampleController");
+    private static Logger log = LoggerFactory.getLogger(SampleController.class);
 
     @GetMapping("/")
     public String index() {
