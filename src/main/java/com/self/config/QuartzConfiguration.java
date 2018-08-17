@@ -1,10 +1,9 @@
-package com.self.tools;
+package com.self.config;
 
-import com.self.tools.task.MyScheduleTask;
+import com.self.config.task.MyScheduleTask;
 import org.quartz.Trigger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.scheduling.config.ScheduledTask;
 import org.springframework.scheduling.quartz.CronTriggerFactoryBean;
 import org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean;
 import org.springframework.scheduling.quartz.SchedulerFactoryBean;

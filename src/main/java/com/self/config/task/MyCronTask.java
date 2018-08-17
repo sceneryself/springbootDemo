@@ -1,4 +1,4 @@
-package com.self.tools.task;
+package com.self.config.task;
 
 import org.quartz.*;
 import org.springframework.scheduling.annotation.EnableScheduling;
