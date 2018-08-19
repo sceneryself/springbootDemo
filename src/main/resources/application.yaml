@@ -24,6 +24,15 @@ spring:
         max-wait: 3ms
         min-idle: 0
         max-idle: 8
+  data:
+    elasticsearch:
+      cluster-name: elasticsearch
+      #节点的地址，api模式端口号9300，千万不要写成9200
+      cluster-nodes: 127.0.0.1:9300
+      #开启本地缓存
+      repositories: true
+
+
 
 ---
 #dev env

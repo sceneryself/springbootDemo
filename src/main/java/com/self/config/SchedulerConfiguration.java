@@ -16,18 +16,18 @@ public class SchedulerConfiguration {
     @Scheduled(cron = "* 1 * * * ?")
     public void cornProcess() {
         DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        log.info("cron: " + sdf.format(new Date()));
+        log.info("Scheduled cron: " + sdf.format(new Date()));
     }
 
     @Scheduled(fixedRate = 59000)
     public void fixedRate() {
         DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        log.info("fixedRate:" + sdf.format(new Date()));
+        log.info("Scheduled fixedRate:" + sdf.format(new Date()));
     }
 
     @Scheduled(fixedDelay = 58000)
     public void fixedDelay() {
         DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        log.info("fixedDelay: " + sdf.format(new Date()));
+        log.info("Scheduled fixedDelay: " + sdf.format(new Date()));
     }
 }

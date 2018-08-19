@@ -1,5 +1,6 @@
 package com.self.config;
 
+import com.self.model.Info;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -10,8 +11,8 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 public class RedisConfigure {
 
     @Bean
-    public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory factory) {
-        RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>(String, Object);
+    public RedisTemplate<Info, Object> redisTemplate(RedisConnectionFactory factory) {
+        RedisTemplate<Info, Object> redisTemplate = new RedisTemplate<Info, Object>();
         redisTemplate.setConnectionFactory(factory);
         redisTemplate.setKeySerializer(new StringRedisSerializer());
         redisTemplate.setValueSerializer(new StringRedisSerializer());

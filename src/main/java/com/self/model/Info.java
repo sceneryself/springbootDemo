@@ -1,6 +1,8 @@
 package com.self.model;
 
 public class Info {
+    private String name;
+    private int id;
     private int maxchannelcount;
     private int curchannelcount;
     private int code;
@@ -36,5 +38,21 @@ public class Info {
 
     public void setMsg(String msg) {
         this.msg = msg;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
