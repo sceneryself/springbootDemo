@@ -14,7 +14,7 @@ spring:
   service:
     url: http://127.0.0.1:50005
   redis:
-    host: 127.0.0.1
+    host: 172.16.183.215
     port: 6379
     password: 123456
     database: 9
@@ -28,7 +28,7 @@ spring:
     elasticsearch:
       cluster-name: elasticsearch
       #节点的地址，api模式端口号9300，千万不要写成9200
-      cluster-nodes: 127.0.0.1:9300
+      cluster-nodes: 172.16.183.215:9300
       #开启本地缓存
       repositories: true
 

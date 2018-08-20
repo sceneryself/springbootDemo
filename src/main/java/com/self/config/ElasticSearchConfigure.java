@@ -16,7 +16,7 @@ import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 @Configuration
 public class ElasticSearchConfigure {
 
-    @Value("${elasticsearch.name}")
+    @Value("${spring.data.elasticsearch.cluster-name}")
     private String name;
 
     private Settings settings() {

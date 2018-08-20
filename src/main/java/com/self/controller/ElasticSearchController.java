@@ -32,13 +32,13 @@ public class ElasticSearchController {
     @Autowired
     private ItemDocumentRepository itemDocumentRepository;
 
-    @GetMapping("/get")
+    @GetMapping("es/get")
     public GetResponse get() {
         GetResponse response = client.prepareGet("info", "info", "1").get();
         return response;
     }
 
-    @PostMapping("/save")
+    @PostMapping("es/save")
     public String save() {
         Map map = new HashMap<String, Object>();
         map.put("id", 1);
@@ -47,7 +47,7 @@ public class ElasticSearchController {
         return response.getId();
     }
 
-    @GetMapping("/query")
+    @GetMapping("es/query")
     public List<String> search() {
         SearchResponse response = client.prepareSearch("info").setTypes("info").setSearchType(SearchType.DFS_QUERY_THEN_FETCH)
                 .setPostFilter(QueryBuilders.rangeQuery("id").from(0).to(100)).setFrom(0).setSize(100).setExplain(true).get();
@@ -63,14 +63,14 @@ public class ElasticSearchController {
         return data;
     }
 
-    @PostMapping("/insert")
+    @PostMapping("es/insert")
     public boolean insert(){
         Info info = new Info();
         itemDocumentRepository.save(info);
         return true;
     }
 
-    @GetMapping("/search")
+    @GetMapping("es/search")
     public List<Info> search(String name){
         QueryStringQueryBuilder builder = new QueryStringQueryBuilder(name);
         Iterable<Info> searchResult = itemDocumentRepository.search(builder);
@@ -82,7 +82,7 @@ public class ElasticSearchController {
         return infos;
     }
 
-    @GetMapping("/searchPage")
+    @GetMapping("es/searchPage")
     public List<Info> searchPage(String name){
         Pageable pageable = new PageRequest(1, 100);
         QueryStringQueryBuilder builder = new QueryStringQueryBuilder(name);
@@ -91,6 +91,7 @@ public class ElasticSearchController {
         return searchResult.getContent();
     }
 
+    @GetMapping("es/searchWeight")
     public List<Info> searchByWeight(String name){
         FunctionScoreQueryBuilder functionScoreQueryBuilder = QueryBuilders.functionScoreQuery(QueryBuilders.boolQuery().should(QueryBuilders.matchQuery("name", name)));
         Iterable<Info> searchResult = itemDocumentRepository.search(functionScoreQueryBuilder);

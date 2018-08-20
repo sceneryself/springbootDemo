@@ -1,5 +1,8 @@
 package com.self.model;
 
+import org.springframework.data.elasticsearch.annotations.Document;
+
+@Document(indexName = "testinfo",type = "info")
 public class Info {
     private String name;
     private int id;
