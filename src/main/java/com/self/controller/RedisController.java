@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.concurrent.TimeUnit;
 
 @RestController
 public class RedisController {
@@ -17,7 +16,7 @@ public class RedisController {
 
     @GetMapping("/redis/get")
     public String get(@RequestParam String key){
-        return redisTemplate.opsForValue().get(key, 100, 100);
+        return (String) redisTemplate.opsForValue().get(key);
     }
 
     @PostMapping("/redis/set")

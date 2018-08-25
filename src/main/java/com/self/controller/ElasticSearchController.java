@@ -43,6 +43,8 @@ public class ElasticSearchController {
         Map map = new HashMap<String, Object>();
         map.put("id", 1);
         map.put("name", "test");
+        map.put("code", 1000);
+        map.put("msg", "test info");
         IndexResponse response = client.prepareIndex("info", "info", map.get("id").toString()).setSource(map).execute().actionGet();
         return response.getId();
     }

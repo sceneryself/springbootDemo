@@ -2,8 +2,10 @@ package com.self.model;
 
 import org.springframework.data.elasticsearch.annotations.Document;
 
+import java.io.Serializable;
+
 @Document(indexName = "testinfo",type = "info")
-public class Info {
+public class Info implements Serializable {
     private String name;
     private int id;
     private int maxchannelcount;
