@@ -31,6 +31,24 @@ spring:
       cluster-nodes: 172.16.183.215:9300
       #开启本地缓存
       repositories: true
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/dataclean?characterEncoding=UTF-8&useSSL=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+      show-sql: true
+    hikari:
+      minimum-idle: 10
+      maximum-pool-size: 30
+      connection-test-query: SELECT 1 FROM DUAL
+      connection-timeout: 30000
+      idleTimeout: 600000
+      maxLifetime: 1800000
 
 
 

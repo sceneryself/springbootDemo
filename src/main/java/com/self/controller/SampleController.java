@@ -23,7 +23,7 @@ public class SampleController {
         return "success:" + id + "; name:" + name;
     }
 
-    @PostMapping("/aispeech/callcenter/warn")
+    @PostMapping("/warn")
     public String warnInfo(@RequestBody Info info) {
         log.info("get warn info");
         log.info("maxChannelCount=" + info.getMaxchannelcount() + ", curChannelCount=" + info.getCurchannelcount() + ",msg=" + info.getMsg());
